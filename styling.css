@@ -2,3 +2,14 @@
 {
   font-family:Monospace,Arial;
 }
+
+.thing
+{
+  border-radius:8px;
+  background:rgba(255,255,255,0.5);
+}
+
+#game.filtersOn .thing.cantAfford.notOwned
+{
+  filter:blur(3px);
+}
