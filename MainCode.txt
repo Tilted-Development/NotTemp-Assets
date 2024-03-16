@@ -1,16 +1,17 @@
-name:NotTemp
-author:TiltedDevelopment
-desc:<t>The NotTemp Guide</t>
-created:16/03/2024
-updated:16/03/2024
-version:0.1
+Let's make a game!
+    name:NotTemp
+    author:TiltedDevelopment
+    desc:<t>The NotTemp Guide</t>
+    created:16/03/2024
+    updated:16/03/2024
+    version:0.1
 
 Settings
-building cost increase:120%
-building cost refund:25%
-background:https://github.com/Tilted-Development/NotTemp-Assets/blob/main/nottemp_background.png
-spritesheet:Tileset, 16 by 16, https://github.com/Tilted-Development/NotTemp-Assets/blob/main/nottemp_tileset.png
-stylesheet:https://github.com/Tilted-Development/NotTemp-Assets/blob/main/styling.css
+    building cost increase:120%
+    building cost refund:25%
+    background:https://github.com/Tilted-Development/NotTemp-Assets/blob/main/nottemp_background.png
+    spritesheet:Tileset, 16 by 16, https://github.com/Tilted-Development/NotTemp-Assets/blob/main/nottemp_tileset.png
+    stylesheet:https://github.com/Tilted-Development/NotTemp-Assets/blob/main/styling.css
 
 Layout
     *resources
