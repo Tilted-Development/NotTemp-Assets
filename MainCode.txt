@@ -1,0 +1,84 @@
+name:NotTemp
+author:TiltedDevelopment
+desc:<t>The NotTemp Guide</t>
+created:16/03/2024
+updated:16/03/2024
+version:0.1
+
+Settings
+building cost increase:120%
+building cost refund:25%
+background:https://github.com/Tilted-Development/NotTemp-Assets/blob/main/nottemp_background.png
+spritesheet:Tileset, 16 by 16, https://github.com/Tilted-Development/NotTemp-Assets/blob/main/nottemp_tileset.png
+stylesheet:https://github.com/Tilted-Development/NotTemp-Assets/blob/main/styling.css
+
+Layout
+    *resources
+        contains:Resources
+        header:Your current resources
+    *buildings
+        contains:BulkDisplay,Buildings
+        header:What you can build
+        tooltip origin:left
+    *unlockables
+        contains:Upgrades, Achievements
+        names:hide
+    *buttons
+        contains:Buttons
+        names:hide
+    *log
+        contains:Log
+        header:Log
+
+Buttons
+    *recourceButton
+        name:Resources
+        on click:yield (file) rsc
+        show clicks
+
+Resources
+    *rsc
+        name:temp
+        text:You have [?(this=0) |no resources|[?(this=1) |1 resource|[this] resources]]
+        icon:Tileset[0,3]
+        tags:res mainRes req
+        show earned
+        show max
+
+
+Buildings
+    *file
+        icon:Tileset[0,0]
+        costs:25 rsc
+        req:10 rsc
+        req:have storageL1
+        req:(this<=(storage))
+        show max
+
+Upgrades
+    *storageL1
+        costs:5 rsc
+        name:Storage Lvl1
+        yield 10 storage10
+
+Achievements
+    *welcome
+        name:Welcome!
+        desc:Play the game
+        owned
+    *x2res1
+        name:x2
+        desc:res=res*2;
+        req:(x2res:clicks)
+
+Shinies
+    *x2res
+        name:Double Resources
+        frequency:120
+        frequency variation:60
+        duration:5
+        movement:anywhere wiggle pulse randomAngle shrink fade moveRandom
+
+Items
+    *storage
+        name:temp
